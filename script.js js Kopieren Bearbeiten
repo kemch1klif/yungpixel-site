@@ -1,0 +1,44 @@
+// Переключение темы
+const themeToggleBtn = document.getElementById('theme-toggle');
+themeToggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-theme');
+  if (document.body.classList.contains('light-theme')) {
+    themeToggleBtn.textContent = '🌞';
+  } else {
+    themeToggleBtn.textContent = '🌙';
+  }
+});
+
+// Загрузка статуса Minecraft-сервера (ping + онлайн)
+// Используем API https://api.mcsrvstat.us/2/play.yungpixel.net
+const serverStatusDiv = document.getElementById('server-status');
+
+async function fetchServerStatus() {
+  try {
+    const response = await fetch('https://api.mcsrvstat.us/2/play.yungpixel.net');
+    const data = await response.json();
+
+    if (data.online) {
+      serverStatusDiv.innerHTML = `
+        <p>🟢 Сервер онлайн</p>
+        <p>Игроков онлайн: ${data.players.online} из ${data.players.max}</p>
+        <p>Версия сервера: ${data.version}</p>
+      `;
+    } else {
+      serverStatusDiv.innerHTML = `<p>🔴 Сервер оффлайн или недоступен</p>`;
+    }
+  } catch (error) {
+    serverStatusDiv.innerHTML = `<p>Ошибка при загрузке статуса сервера.</p>`;
+    console.error(error);
+  }
+}
+fetchServerStatus();
+
+// Статус Discord через API Discord (используем публичный API виджета сервера)
+// Заменить 'твой_дискорд_ID_сервера' на настоящий ID сервера Discord (см. в настройках Discord > Виджет)
+const discordStatusP = document.getElementById('discord-status');
+const discordGuildId = 'твой_дискорд_ID_сервера'; // Вставь сюда ID своего Discord сервера
+
+async function fetchDiscordStatus() {
+  try {
+    const
