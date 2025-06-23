@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YungPixel — Minecraft Server</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <!-- Логотип Minecraft-пиксель -->
+      <img src="https://i.imgur.com/QzUvVRj.png" alt="YungPixel Logo" class="logo" />
+      <h1>YungPixel</h1>
+    </div>
+    <p>Остров анархии в мире пикселей</p>
+    <button id="theme-toggle" aria-label="Переключить тему">🌙</button>
+  </header>
+
+  <nav>
+    <a href="#about">О сервере</a>
+    <a href="#rules">Правила</a>
+    <a href="#connect">Как зайти</a>
+    <a href="#status">Статус</a>
+    <a href="#discord">Discord</a>
+    <a href="#map">Карта</a>
+  </nav>
+
+  <main>
+    <section id="about" class="fade-in">
+      <h2>О сервере</h2>
+      <p>
+        YungPixel — Minecraft-сервер в стиле островной анархии, где нет границ, только свобода и творчество. Пиксель-арт, PvP, острова, войны и полный хардкор!
+      </p>
+      <div class="skin-preview">
+        <img src="https://mc-heads.net/avatar/Steve/100" alt="Скин Steve" />
+        <img src="https://mc-heads.net/avatar/Alex/100" alt="Скин Alex" />
+      </div>
+    </section>
+
+    <section id="rules" class="fade-in">
+      <h2>Правила</h2>
+      <ul>
+        <li>🚫 Нет читов</li>
+        <li>⚔️ PvP разрешено</li>
+        <li>🎨 Разрешён арт и строительство</li>
+        <li>🔥 Гриферство — часть игры</li>
+      </ul>
+    </section>
+
+    <section id="connect" class="fade-in">
+      <h2>Как зайти</h2>
+      <p>IP сервера: <code>play.yungpixel.net</code></p>
+      <p>Версия: 1.20+</p>
+      <audio controls id="bg-music" preload="none" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/24/audio_431f7b3c4a.mp3?filename=8-bit-game-music-11499.mp3" type="audio/mpeg" />
+        Тег аудио не поддерживается вашим браузером.
+      </audio>
+    </section>
+
+    <section id="status" class="fade-in">
+      <h2>Статус сервера и онлайн</h2>
+      <div id="server-status">
+        <p>Загрузка статуса...</p>
+      </div>
+    </section>
+
+    <section id="discord" class="fade-in">
+      <h2>Наш Discord</h2>
+      <p>
+        <a href="https://discord.gg/твой_линк" target="_blank" rel="noopener" class="discord-btn">
+          Подключиться к Discord
+        </a>
+      </p>
+      <p id="discord-status">Загрузка статуса Discord...</p>
+    </section>
+
+    <section id="map" class="fade-in">
+      <h2>Превью карты сервера</h2>
+      <div class="map-preview">
+        <img src="https://i.imgur.com/8R29dLR.jpg" alt="Превью карты YungPixel" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 YungPixel. Неофициальный Minecraft-сервер.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
